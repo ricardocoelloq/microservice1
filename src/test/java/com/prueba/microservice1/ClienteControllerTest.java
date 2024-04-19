@@ -38,7 +38,7 @@ public class ClienteControllerTest {
 
         mockMvc.perform(post("/clientes")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content("{\"nombre\":\"Pierre\",\"contraseña\":\"1234\",\"estado\":\"True\"}"))
+                        .content("{\"nombre\":\"Pedro\",\"contraseña\":\"1234\",\"estado\":\"True\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.nombre", is("Pedro")))
                 .andExpect(jsonPath("$.contraseña", is("1234")))
